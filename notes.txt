@@ -1,0 +1,15 @@
+After you have run git add .
+remove the node modules, because you don't want to keep track of it, so run this command on the terminal
+
+
+git rm --chached -r node_modules
+
+then if you do git status, you will see that the modules won't be cached.
+
+Then create add the node_modules to the .gitignore file
+ex:
+	on terhminal:	touch .gitignore
+
+	open the file and just add: node_modules/
+
+     -> if see the status, notice that the .gitinore file is not cached

@@ -14,7 +14,7 @@ var middleware = {
 	},
 	logger: function(req, resp, next){
 		var date = new Date()
-		console.log('Request: ' + req.method + ' ' + req.originalUrl + ' on -- ' + date.toString());
+		console.log('Request: ' + req.method + ' ' + req.originalUrl + ' on -' + date.toString());
 		next();
 	}
 }
@@ -35,7 +35,7 @@ var middleware = {
 app.use(middleware.logger);
 
 app.get('/aboutus',middleware.requireAuthentication, function (req, resp) {
-	resp.send('About us :-)!');
+	resp.send('About us :-)! ');
 });
 
 // --> The class had the index.html inside a public directory 
