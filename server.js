@@ -1,23 +1,28 @@
 var express = require('express');
 var app = express();
-var PORT = 3000;
+
+/*		HEROKU LESSON
+ ---> Heroku establishes its own port, you can ask for this port thorugh the process.env.PORT 
+*/
+var PORT = process.env.PORT || 3000;
+var middleware = require('./middleware.js');
 
 // app.get('/', function (req, resp) {
 // 	resp.send('Hello Express!');
 // });
 
 
-var middleware = {
-	requireAuthentication: function (req, resp, next){
-		console.log('private route hit!');
-		next();
-	},
-	logger: function(req, resp, next){
-		var date = new Date()
-		console.log('Request: ' + req.method + ' ' + req.originalUrl + ' on -' + date.toString());
-		next();
-	}
-}
+// var middleware = {
+// 	requireAuthentication: function (req, resp, next){
+// 		console.log('private route hit!');
+// 		next();
+// 	},
+// 	logger: function(req, resp, next){
+// 		var date = new Date()
+// 		console.log('Request: ' + req.method + ' ' + req.originalUrl + ' on -' + date.toString());
+// 		next();
+// 	}
+// }
 
 /* Lesson #3: Middleware
 			
