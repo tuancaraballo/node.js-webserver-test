@@ -13,3 +13,24 @@ ex:
 	open the file and just add: node_modules/
 
      -> if see the status, notice that the .gitinore file is not cached
+
+
+PUSHING TO HEROKU:
+1- Push to Github first
+2- Push to heroku:
+	>> git push heroku master
+
+RENAME YOUR APP ON HEROKU:
+
+    >> heroku rename new_name
+
+    example: 
+    	https://pure-coast-54078.herokuapp.com/       --> this is a default
+
+     >> if you run in the terminal:
+     
+     	heroku rename tuanserver
+
+        https://tuanserver.herokuapp.com/       --> this is now the new link, the previous link won't work	
+
+     	     
